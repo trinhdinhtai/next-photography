@@ -1,3 +1,3 @@
-import { GeistSans } from "geist/font/sans"
+import { Readex_Pro } from "next/font/google"
 
-export const fontSans = GeistSans
+export const fontSans = Readex_Pro({ subsets: ["latin"] })

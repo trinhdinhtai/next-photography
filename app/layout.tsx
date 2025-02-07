@@ -3,7 +3,6 @@ import { TailwindIndicator } from "@/components/tailwind-indicator"
 import "./globals.css"
 
 import type { Metadata } from "next"
-import { SessionProvider } from "next-auth/react"
 
 import { fontSans } from "@/lib/fonts"
 import { cn } from "@/lib/utils"
@@ -25,8 +24,8 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body
         className={cn(
-          "min-h-screen bg-background font-sans antialiased",
-          fontSans.variable
+          "min-h-screen bg-background antialiased",
+          fontSans.className
         )}
       >
         <ThemeProvider
@@ -35,11 +34,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <div className="relative flex min-h-screen flex-col bg-background">
-            <SiteHeader />
-            <main className="flex-1">{children}</main>
-            <SiteFooter />
-          </div>
+          {children}
           <TailwindIndicator />
         </ThemeProvider>
       </body>
