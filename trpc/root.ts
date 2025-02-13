@@ -1,3 +1,4 @@
+import { photosRouter } from "./routers/photos"
 import { baseProcedure, createTRPCRouter } from "./trpc"
 
 export const appRouter = createTRPCRouter({
@@ -6,6 +7,7 @@ export const appRouter = createTRPCRouter({
       greeting: `hello tRPC`,
     }
   }),
+  photos: photosRouter,
 })
 
 export type AppRouter = typeof appRouter
