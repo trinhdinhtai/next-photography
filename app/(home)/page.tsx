@@ -1,3 +1,9 @@
+import { PageTransitionContainer } from "@/components/page-transition"
+
 export default function HomePage() {
-  return <div>HomePage</div>
+  return (
+    <PageTransitionContainer className="flex min-h-screen w-full flex-col lg:flex-row">
+      HomePage
+    </PageTransitionContainer>
+  )
 }

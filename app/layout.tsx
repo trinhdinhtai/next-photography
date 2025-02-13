@@ -6,8 +6,6 @@ import type { Metadata } from "next"
 
 import { fontSans } from "@/lib/fonts"
 import { cn } from "@/lib/utils"
-import SiteFooter from "@/components/layout/site-footer"
-import SiteHeader from "@/components/layout/site-header"
 import { ThemeProvider } from "@/components/providers/theme-provider"
 
 export const metadata: Metadata = {
@@ -22,12 +20,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body
-        className={cn(
-          "min-h-screen bg-background antialiased",
-          fontSans.className
-        )}
-      >
+      <body className={cn("antialiased", fontSans.className)}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"

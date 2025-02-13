@@ -6,7 +6,7 @@ export default function HomeLayout({ children }: { children: ReactNode }) {
   return (
     <>
       <SiteHeader />
-      <main className="h-full p-3">{children}</main>
+      <main className="p-3">{children}</main>
     </>
   )
 }
